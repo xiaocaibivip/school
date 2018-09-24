@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>登录</title>
+    <link rel="shortcut icon" th:href="@{/images/sql.ico}" type="image/x-icon" />
+    <link th:href="@{/styles/style_dl.css}" rel="stylesheet"
+          type="text/css">
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="header">SQL SERVER 中小型数据库教学辅助系统</div>
+    <div id="main">
+
+        <div id="left"><img th:src="@{/images/img4.jpg}" width="200" height="200"/></div>
+        <div id="right">
+            <form name="form1" action="" method="post">
+                <ul>
+                    <li><label>用户名</label>
+                        <input type="text" name="txt1" size="20"/></li>
+                    <li><label>密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;</label>
+                        <input type="password" name="pwd" size="20"/></li>
+                    <li><input type="submit" name="btn1" value="登录" class="aniu"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" name="btn2" value="重置" class="aniu"/>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+    </div>
+    <div id="footer">版权信息:&copy;河北建材信息工程系 桑丽萍 李彩云 李浩宇所有2018-2028</div>
+</div>
+</body>
+</html>

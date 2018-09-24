@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    width: 950px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #000;
+    margin-top: 100px;
+}
+
+#header {
+    font-size: 36px;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+    font-family: "隶书";
+    color: #039;
+}
+
+#main {
+    height: 200px;
+}
+
+#left {
+    width: 400px;
+    float: left;
+    text-align: right;
+}
+
+#right {
+    width: 450px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 100px;
+    color: #009;
+    font-weight: bolder;
+}
+
+#right li {
+    list-style: none;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+#footer {
+    height: 22px;
+    background-image: url(../images/footer.gif);
+    text-align: center;
+    color: #006;
+    font-size: 16px;
+    font-family: "宋体";
+    font-weight: bolder;
+    padding-top: 32px;
+
+}
+
+.aniu {
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+
+

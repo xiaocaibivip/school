@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Header</title>
+    <link rel="shortcut icon" th:href="@{/images/sql.ico}" type="image/x-icon" />
+    <link th:href="@{/styles/style_idx.css}" rel="stylesheet"
+          type="text/css">
+</head>
+
+<body>
+<div id="header">SQL SERVER 中小型数据库教学辅助系统</div>
+
+<div id="menu">
+    <ul>
+        <li><a th:href="@{index}">首页</a>
+            <ul>
+                <li><a href="javascript: void(alert('暂时未开放'));">最新更新</a></li>
+                <li><a href="javascript: void(alert('暂时未开放'));">下载排行</a></li>
+            </ul>
+        </li>
+        <li><a href="#">数据库概念</a>
+            <ul>
+                <li><a href="javascript: void(alert('暂时未开放'));">数据模型</a></li>
+                <li><a th:href="@{shujuliulan}">数据浏览</a></li>
+                <li><a href="javascript: void(alert('暂时未开放'));">最新动态</a></li>
+            </ul>
+        </li>
+        <li><a href="#">表视图设计</a>
+            <ul>
+                <li><a href="javascript: void(alert('暂时未开放'));">表视图设计</a></li>
+                <li><a href="javascript: void(alert('暂时未开放'));">数据插入</a></li>
+                <li><a href="javascript: void(alert('暂时未开放'));">数据更新</a></li>
+                <li><a href="javascript: void(alert('暂时未开放'));">数据删除</a></li>
+            </ul>
+        </li>
+        <li><a href="#">单表查询</a>
+            <ul>
+                <li><a th:href="@{touyingchaxun}">投影查询</a></li>
+                <li><a th:href="@{tiaojianchaxun}">条件查询</a></li>
+                <li><a th:href="@{shujutongji}">数据统计</a></li>
+            </ul>
+        </li>
+        <li><a href="#">多表查询</a>
+            <ul>
+                <li><a th:href="@{chaxunliangbiao}">两个表查询</a></li>
+                <li><a th:href="@{chaxunsanbiao}">三个表查询</a></li>
+                <li><a href="javascript: void(alert('暂时未开放'));">多表查询</a></li>
+            </ul>
+        </li>
+        <li><a href="#">存储过程</a>
+            <ul>
+                <li><a href="javascript: void(alert('暂时未开放'));">存储过程</a></li>
+                <li><a href="javascript: void(alert('暂时未开放'));">触发器</a></li>
+
+            </ul>
+        </li>
+        <li><a href="#">联系我们</a>
+            <ul>
+                <li><a href="javascript: void(alert('暂时未开放'));">你问我答</a></li>
+                <li><a href="javascript: void(alert('暂时未开放'));">网站大学堂</a></li>
+                <li><a href="javascript: void(alert('暂时未开放'));">论坛</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+</body>
+</html>

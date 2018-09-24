@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    width: 950px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #000;
+    margin-top: 100px;
+}
+
+#header {
+    font-size: 36px;
+    text-align: center;
+    height: 200px;
+    line-height: 150px;
+    font-family: "隶书";
+    color: #f00;
+    background-image: url(../images/img41.jpg);
+
+}
+
+#menu {
+    position: absolute;
+    height: 30px;
+    background-color: #fceaa9;
+    width: 950px;
+}
+
+li {
+    list-style: none;
+    line-height: 30px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    line-height: 30px;
+    color: #036;
+    font-weight: bolder;
+}
+
+#menu ul li {
+    width: 120px;
+    float: left;
+    background-color: #fceaa9;
+}
+
+#menu ul li ul {
+    display: none;
+}
+
+#menu ul li:hover ul, #menu ul li a:hover ul {
+    display: block;
+    width: 120px;
+    height: 30px;
+}
+
+#menu ul li:hover {
+    border-bottom: 1px solid #CCC;
+}
+
+#main {
+    height: 300px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+#main h3 {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.wb {
+    height: 26px;
+}
+
+.pp {
+    font-weight: bolder;
+}
+
+#footer {
+    height: 22px;
+    background-image: url(../images/footer.gif);
+    text-align: center;
+    color: #006;
+    font-size: 16px;
+    font-family: "宋体";
+
+    padding-top: 32px;
+
+}
+	
+
+
+
