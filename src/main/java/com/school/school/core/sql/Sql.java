@@ -7,7 +7,7 @@ public class Sql {
 	//浏览手机信息
 	public static String SHU_JU_LIU_LAN = "SELECT * FROM mobileInfo";
 	// 条件查询
-	public static String TIAO_JIAN_CHA_XUN = "SELECT customername, customerphone FROM customers where city = '[city]'";
+	public static String TIAO_JIAN_CHA_XUN = "SELECT * FROM customers where city = 'cityParam'";
 	//两表连接查询
 	public static String LIANG_BIAO_CHA_XUN = "select a.price,a.remain,a.dateoflisting from mobileInfo a where bid=(select bid from mobilebrand where brandname like'[brandname]')";
 	//三表查询

@@ -9,22 +9,46 @@
     <link rel="shortcut icon" th:href="@{/images/sql.ico}" type="image/x-icon" />
     <link th:href="@{/styles/style_sjtj.css}" rel="stylesheet"
           type="text/css">
+    <script th:src="@{/angular/angular.min.js}" type="text/javascript"></script>
 </head>
 
-<body>
+<body ng-app="app" ng-controller="TiaojianchaxunController" ng-cloak>
 <div id="wrapper">
     <div th:include="common/menu :: html"></div>
     <div id="main">
         <h3>根据会员所在城市查询信息：</h3>
         <form name="form1" action="" method="post">
             <label class="pp">会员所在城市</label>
-            <input type="text" name="txt1" size="40" class="wb"/>
-            <input type="button" name="btn2" value="查询" class="btn"/>
+            <input type="text" name="txt1" ng-model="cityParam" size="40" class="wb"/>
+            <input type="button" name="btn2" value="查询" ng-click="click()" class="btn"/>
         </form>
+        <table style="margin:auto; margin-top: 10px" width="800" height="210" cellspacing="1">
+            <thead>
+            <tr>
+                <td width="175">姓名</td>
+                <td width="435">手机号</td>
+                <td width="435">邮箱</td>
+                <td width="435">城市</td>
+                <td width="435">地址</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="l in list">
+                <td>{{l.customername}}</td>
+                <td>{{l.customerphone}}</td>
+                <td>{{l.email}}</td>
+                <td>{{l.city}}</td>
+                <td>{{l.address}}</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
 
     <div id="footer">版权信息:&copy;河北建材信息工程系 桑丽萍 李彩云 李浩宇所有2018-2028</div>
 </div>
+
+<script th:src="@{/web/tiaojianchaxun.js}" type="text/javascript"></script>
+
 </body>
 </html>

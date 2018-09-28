@@ -6,12 +6,10 @@ app.controller('TouyingchaxunController', ['$scope', '$http',
             return $http.get("/sql/touyingchaxun");
         };
 
-        $scope.init = function () {
+        $scope.click = function () {
             getTouyingchaxun().success(function (result) {
                 $scope.list = result;
             });
         }
-
-        $scope.init();
     }
 ]);

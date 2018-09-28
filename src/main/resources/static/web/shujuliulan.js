@@ -6,13 +6,11 @@ app.controller('ShujuliulanController', ['$scope', '$http',
             return $http.get("/sql/liulanshoujixinxi");
         };
 
-        $scope.init = function () {
+        $scope.click = function () {
             liuLanShouJiXinXi().success(function (result) {
                 $scope.list = result;
-                console.log($scope.list);
             });
         }
 
-        $scope.init();
     }
 ]);
