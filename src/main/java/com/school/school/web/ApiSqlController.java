@@ -16,7 +16,7 @@ public class ApiSqlController {
 	private SqlService sqlService;
 
 	@RequestMapping(value = "/touyingchaxun", method = RequestMethod.GET)
-	public List<Map<String, Object>> get() {
+	public List<Map<String, Object>> getTouyingchaxun() {
 		List<Map<String, Object>> result = sqlService.touyingchaxun();
 		return result;
 	}
