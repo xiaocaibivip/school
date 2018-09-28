@@ -18,15 +18,18 @@
     <div id="main">
         <h3>查询会员姓名和手机号</h3>
         <table style="margin:auto" width="617" height="210" border="0" cellspacing="1">
+            <thead>
             <tr>
                 <td width="175">姓名</td>
                 <td width="435">手机号</td>
             </tr>
+            </thead>
+            <tbody>
             <tr ng-repeat="l in list">
                 <td>{{l.customername}}</td>
                 <td>{{l.customerphone}}</td>
             </tr>
-
+            </tbody>
         </table>
         <form name="form1" action="" method="post">
             <input type="button" name="btn2" value="查询" class="btn"/>

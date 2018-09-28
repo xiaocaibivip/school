@@ -5,7 +5,7 @@ public class Sql {
 	// 投影查询
 	public static String TOU_YING_CHA_XUN = "SELECT customername, customerphone FROM customers";
 	//浏览手机信息
-	public static String SHU_JU_LIU_LAN = "SELECT bid, brandname FROM mobilebrand";
+	public static String SHU_JU_LIU_LAN = "SELECT * FROM mobileInfo";
 	// 条件查询
 	public static String TIAO_JIAN_CHA_XUN = "SELECT customername, customerphone FROM customers where city = '[city]'";
 	//两表连接查询
