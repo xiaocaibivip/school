@@ -9,7 +9,23 @@ public class Sql {
 	// 条件查询
 	public static String TIAO_JIAN_CHA_XUN = "SELECT * FROM customers where city = 'cityParam'";
 	//两表连接查询
-	public static String LIANG_BIAO_CHA_XUN = "select a.price,a.remain,a.dateoflisting from mobileInfo a where bid=(select bid from mobilebrand where brandname like'[brandname]')";
+	public static String LIANG_BIAO_CHA_XUN = "SELECT " +
+			"mi.mname, " +
+			"mi.unitprice, " +
+			"mi.remain, " +
+			"mb.brandname " +
+			"FROM mobileinfo mi " +
+			"INNER JOIN mobilebrand mb ON mi.bid = mb.bid " +
+			"WHERE mb.brandname = 'brandnameParam'";
 	//三表查询
-	public static String SAN_BIAO_CHA_XUN = "select b.mname,a.buydate,a.salescount from mobilesales a,mobileinfo b,mobilebrand c where b.bid=c.bid and b.mid = a.mid and c.brandname like'[brandname]'";
+	public static String SAN_BIAO_CHA_XUN = "SELECT " +
+			"mi.mname, " +
+			"mi.os, " +
+			"ms.total, " +
+			"ms.buydate, " +
+			"mb.brandname " +
+			"FROM mobileinfo mi " +
+			"INNER JOIN mobilebrand mb ON mi.bid = mb.bid  " +
+			"INNER JOIN mobilesales ms ON mi.mid = ms.mid " +
+			"WHERE mb.brandname = 'brandnameParam'";
 }
