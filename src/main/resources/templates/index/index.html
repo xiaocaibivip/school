@@ -9,9 +9,10 @@
     <link rel="shortcut icon" th:href="@{/images/sql.ico}" type="image/x-icon" />
     <link th:href="@{/styles/style_idx.css}" rel="stylesheet"
           type="text/css">
+    <script th:src="@{/angular/angular.min.js}" type="text/javascript"></script>
 </head>
 
-<body>
+<body ng-app="app" ng-controller="IndexController" ng-cloak>
 <div id="wrapper">
     <div th:include="common/menu :: html"></div>
 
@@ -27,5 +28,8 @@
 
     <div id="footer">版权信息:&copy;河北建材信息工程系 桑丽萍 李彩云 李浩宇所有2018-2028</div>
 </div>
+
+<script th:src="@{/web/index.js}" type="text/javascript"></script>
+
 </body>
 </html>

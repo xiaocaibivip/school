@@ -78,10 +78,18 @@ a {
     margin-bottom: 10px;
 }
 
+#main table {
+    background-color: #000;
+}
+
+#main td {
+    background-color: #fff;
+}
+
 .btn {
     width: 100px;
     height: 30px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 20px;
 
 }

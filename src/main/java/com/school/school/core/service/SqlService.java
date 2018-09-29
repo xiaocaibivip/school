@@ -25,7 +25,7 @@ public class SqlService {
 	}
 	// 条件查询
 	public List<Map<String, Object>> tiaoJianChaXun(String city) {
-		String sql = Sql.TIAO_JIAN_CHA_XUN.replaceAll("[city]",city);
+		String sql = Sql.TIAO_JIAN_CHA_XUN.replaceAll("cityParam",city);
 		List<Map<String, Object>> result = jdbcTemplate.queryForList(sql);
 		return result;
 	}

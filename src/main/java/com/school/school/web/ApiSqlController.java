@@ -21,24 +21,32 @@ public class ApiSqlController {
 		return result;
 	}
 
-	@RequestMapping(value = "/shujuliulan", method = RequestMethod.GET)
+	//浏览手机信息
+	@RequestMapping(value = "/liulanshoujixinxi", method = RequestMethod.GET)
 	public List<Map<String, Object>> liuLanShouJiXinXi() {
 		List<Map<String, Object>> result = sqlService.liuLanShouJiXinXi();
 		return result;
 	}
-	@RequestMapping(value = "/tiaojianchaxun", method = RequestMethod.GET)
-	public List<Map<String, Object>> tiaoJianChaXun(String city) {
+
+	// 条件查询
+	@RequestMapping(value = "/tiaojianchaxun/{city}", method = RequestMethod.GET)
+	public List<Map<String, Object>> tiaoJianChaXun(@PathVariable String city) {
 		List<Map<String, Object>> result = sqlService.tiaoJianChaXun(city);
 		return result;
 	}
-	@RequestMapping(value = "/chaxunliangbiao", method = RequestMethod.GET)
-	public List<Map<String, Object>> liangBiaoLianJieChaXun(String brandname) {
+
+	//两表连接查询
+	@RequestMapping(value = "/liangbiaolianjiechaxun/{brandname}", method = RequestMethod.GET)
+	public List<Map<String, Object>> liangBiaoLianJieChaXun(@PathVariable String brandname) {
 		List<Map<String, Object>> result = sqlService.liangBiaoLianJieChaXun(brandname);
 		return result;
 	}
-	@RequestMapping(value = "/chaxunsanbiao", method = RequestMethod.GET)
-	public List<Map<String, Object>> sanBiaoChaXun(String brandname) {
+
+	//三表查询
+	@RequestMapping(value = "/sanbiaochaxun/{brandname}", method = RequestMethod.GET)
+	public List<Map<String, Object>> sanBiaoChaXun(@PathVariable String brandname) {
 		List<Map<String, Object>> result = sqlService.sanBiaoChaXun(brandname);
 		return result;
 	}
+
 }
