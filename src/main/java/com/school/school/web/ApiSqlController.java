@@ -20,4 +20,25 @@ public class ApiSqlController {
 		List<Map<String, Object>> result = sqlService.touyingchaxun();
 		return result;
 	}
+
+	@RequestMapping(value = "/shujuliulan", method = RequestMethod.GET)
+	public List<Map<String, Object>> liuLanShouJiXinXi() {
+		List<Map<String, Object>> result = sqlService.liuLanShouJiXinXi();
+		return result;
+	}
+	@RequestMapping(value = "/tiaojianchaxun", method = RequestMethod.GET)
+	public List<Map<String, Object>> tiaoJianChaXun(String city) {
+		List<Map<String, Object>> result = sqlService.tiaoJianChaXun(city);
+		return result;
+	}
+	@RequestMapping(value = "/chaxunliangbiao", method = RequestMethod.GET)
+	public List<Map<String, Object>> liangBiaoLianJieChaXun(String brandname) {
+		List<Map<String, Object>> result = sqlService.liangBiaoLianJieChaXun(brandname);
+		return result;
+	}
+	@RequestMapping(value = "/chaxunsanbiao", method = RequestMethod.GET)
+	public List<Map<String, Object>> sanBiaoChaXun(String brandname) {
+		List<Map<String, Object>> result = sqlService.sanBiaoChaXun(brandname);
+		return result;
+	}
 }
