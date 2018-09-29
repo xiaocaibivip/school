@@ -2,6 +2,7 @@ package com.school.school.web;
 
 import com.school.school.core.service.SqlService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +16,9 @@ public class ApiSqlController {
 	@Autowired
 	private SqlService sqlService;
 
+	// 投影查询
 	@RequestMapping(value = "/touyingchaxun", method = RequestMethod.GET)
-	public List<Map<String, Object>> get() {
+	public List<Map<String, Object>> getTouyingchaxun() {
 		List<Map<String, Object>> result = sqlService.touyingchaxun();
 		return result;
 	}
