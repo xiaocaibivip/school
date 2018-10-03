@@ -51,4 +51,11 @@ public class ApiSqlController {
 		return result;
 	}
 
+	//数据查询(根据手机品牌统计手机销售信息)
+	@RequestMapping(value = "/shujutongji/{brandname}", method = RequestMethod.GET)
+	public List<Map<String, Object>> shuJuTongJi(@PathVariable String brandname) {
+		List<Map<String, Object>> result = sqlService.shuJuTongJi(brandname);
+		return result;
+	}
+
 }

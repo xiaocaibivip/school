@@ -45,4 +45,13 @@ public class SqlService {
 		List<Map<String, Object>> result = jdbcTemplate.queryForList(sql);
 		return result;
 	}
+
+	//数据查询(根据手机品牌统计手机销售信息)
+	public List<Map<String, Object>> shuJuTongJi(String brandname) {
+		String sql = Sql.SHU_JU_TONG_JI.replaceAll("brandnameParam", brandname);
+		List<Map<String, Object>> result = jdbcTemplate.queryForList(sql);
+		return result;
+	}
+
+
 }

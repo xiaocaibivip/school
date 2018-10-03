@@ -28,4 +28,14 @@ public class Sql {
 			"INNER JOIN mobilebrand mb ON mi.bid = mb.bid  " +
 			"INNER JOIN mobilesales ms ON mi.mid = ms.mid " +
 			"WHERE mb.brandname = 'brandnameParam'";
+
+	//数据查询(根据手机品牌统计手机销售信息)
+	public static String SHU_JU_TONG_JI = "SELECT " +
+			"top 1 " +
+			"ms.total, " +
+			"mb.brandname " +
+			"FROM mobileinfo mi " +
+			"INNER JOIN mobilebrand mb ON mi.bid = mb.bid  " +
+			"INNER JOIN mobilesales ms ON mi.mid = ms.mid " +
+			"WHERE mb.brandname = 'brandnameParam' ";
 }
