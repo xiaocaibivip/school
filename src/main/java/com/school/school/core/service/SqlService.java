@@ -53,5 +53,9 @@ public class SqlService {
 		return result;
 	}
 
-
+	//数据统计(统计当月注册了的会员人数)
+	public List<Map<String, Object>> huiYuanTongJi() {
+		List<Map<String, Object>> result = jdbcTemplate.queryForList(Sql.HUI_YUAN_TONG_JI);
+		return result;
+	}
 }

@@ -21,7 +21,7 @@ public class Sql {
 	public static String SAN_BIAO_CHA_XUN = "SELECT " +
 			"mi.mname, " +
 			"mi.os, " +
-			"ms.total, " +
+			"ms.salescount, " +
 			"ms.buydate, " +
 			"mb.brandname " +
 			"FROM mobileinfo mi " +
@@ -31,11 +31,14 @@ public class Sql {
 
 	//数据查询(根据手机品牌统计手机销售信息)
 	public static String SHU_JU_TONG_JI = "SELECT " +
-			"top 1 " +
-			"ms.total, " +
+			"SUM(ms.salescount) as amount, " +
 			"mb.brandname " +
 			"FROM mobileinfo mi " +
 			"INNER JOIN mobilebrand mb ON mi.bid = mb.bid  " +
 			"INNER JOIN mobilesales ms ON mi.mid = ms.mid " +
-			"WHERE mb.brandname = 'brandnameParam' ";
+			"WHERE mb.brandname = 'brandnameParam' group by brandname";
+
+	//数据统计(统计当月注册了的会员人数)
+	public static String HUI_YUAN_TONG_JI = "select COUNT(*) as amount,Datename(year,GetDate())+Datename(month,GetDate()) as monthNum from customers\n" +
+			"where year(regdate)=year(GETDATE())and  month(regdate)=month(GETDATE())\n";
 }

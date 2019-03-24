@@ -12,34 +12,34 @@
     <script th:src="@{/angular/angular.min.js}" type="text/javascript"></script>
 </head>
 
-<body ng-app="app" ng-controller="ShujutongjiController" ng-cloak>
+<body ng-app="app" ng-controller="huiyuantongjiController" ng-cloak>
 <div id="wrapper">
     <div th:include="common/menu :: html"></div>
     <div id="main">
-        <h3>根据手机品牌统计手机销售信息：</h3>
-        <form name="form1" action="" method="post">
-            <input type="text" ng-model="brand" size="40" class="wb"/>
-            <input type="button" ng-click="click()" value="搜索" class="btn"/>
-        </form>
+        <h3>统计当月注册了的会员人数：</h3>
+
         <table style="margin:auto; margin-top: 10px" width="800" height="210" cellspacing="1">
             <thead>
             <tr>
-                <td width="175">品牌</td>
-                <td width="435">销量</td>
+                <td width="175">月份</td>
+                <td width="435">新增注册会员人数</td>
             </tr>
             </thead>
             <tbody>
             <tr ng-repeat="l in list">
-                <td>{{l.brandname}}</td>
+                <td>{{l.monthNum}}</td>
                 <td>{{l.amount}}</td>
             </tr>
             </tbody>
         </table>
+        <form name="form1" action="" method="post">
+            <input type="button" name="btn2" value="查询" ng-click="click()" class="btn"/>
+        </form>
     </div>
 
 
     <div id="footer">版权信息:&copy;河北建材信息工程系 桑丽萍 李彩云 李浩宇所有2018-2028</div>
 </div>
-<script th:src="@{/web/shujutongji.js}" type="text/javascript"></script>
+<script th:src="@{/web/huiyuantongji.js}" type="text/javascript"></script>
 </body>
 </html>

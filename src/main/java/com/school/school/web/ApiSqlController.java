@@ -58,4 +58,11 @@ public class ApiSqlController {
 		return result;
 	}
 
+	//数据统计(统计当月注册了的会员人数)
+	@RequestMapping(value = "/huiyuantongji", method = RequestMethod.GET)
+	public List<Map<String, Object>> getHuiyuantongji() {
+		List<Map<String, Object>> result = sqlService.huiYuanTongJi();
+		return result;
+	}
+
 }

@@ -27,8 +27,8 @@
             <thead>
             <tr>
                 <td width="175">手机名称</td>
+                <td width="171">手机操作系统</td>
                 <td width="175">品牌</td>
-                <td width="171">手机型号</td>
                 <td width="163">销售数量</td>
                 <td width="435">销售日期</td>
             </tr>
@@ -36,9 +36,9 @@
             <tbody>
             <tr ng-repeat="l in list">
                 <td>{{l.mname}}</td>
-                <td>{{l.brandname}}</td>
                 <td>{{l.os}}</td>
-                <td>{{l.total}}</td>
+                <td>{{l.brandname}}</td>
+                <td>{{l.salescount}}</td>
                 <td>{{l.buydate}}</td>
             </tr>
             </tbody>

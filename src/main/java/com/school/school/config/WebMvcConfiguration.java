@@ -47,5 +47,6 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 		registry.addViewController("/shujutongjiqhd").setViewName("shujutongjiqhd/shujutongjiqhd");
 		registry.addViewController("/tiaojianchaxun").setViewName("tiaojianchaxun/tiaojianchaxun");
 		registry.addViewController("/touyingchaxun").setViewName("touyingchaxun/touyingchaxun");
+		registry.addViewController("/huiyuantongji").setViewName("huiyuantongji/huiyuantongji");
 	}
 }
