@@ -11,7 +11,7 @@
     <script th:src="@{/web/app.js}" type="text/javascript"></script>
 </head>
 
-<body ng-app="app" ng-controller="dengluController" ng-cloak>
+<body ng-app="app" ng-controller="zhuceController" ng-cloak>
 <div id="wrapper">
     <div class="denglu-header">SQL SERVER 中小型数据库教学辅助系统</div>
     <div id="main">
@@ -21,11 +21,21 @@
             <form name="form1" action="" method="post">
                 <ul>
                     <li><label>用户名</label>
-                        <input type="text" name="txt1" ng-model="username" size="20"/></li>
-                    <li><label>密   码&nbsp;</label>
-                        <input type="password" name="pwd" ng-model="password" size="20"/></li>
-                    <li><input type="submit" name="btn1" value="登录" ng-click="click()" class="aniu"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a type="reset" th:href="@{zhuce}" class="aniu">返回注册页面</a>
+                        <input type="text" ng-model="username" size="20"/></li>
+                    <li><label>密码</label>
+                        <input type="password" ng-model="password" size="20"/></li>
+
+                    <li><label>邮箱</label>
+                        <input type="text" ng-model="email" size="20"/></li>
+                    <li><label>电话</label>
+                        <input type="password" ng-model="phone" size="20"/></li>
+                    <li><label>地址</label>
+                        <input type="password" ng-model="address" size="20"/></li>
+                    <li><label>城市</label>
+                        <input type="password" ng-model="city" size="20"/></li>
+                    <li>
+                        <input type="submit" name="btn1" value="提交" ng-click="click()" class="aniu"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a type="reset" th:href="@{denglu}" class="aniu">返回登录页面</a>
                     </li>
                 </ul>
             </form>
@@ -34,6 +44,6 @@
     </div>
     <div id="footer">版权信息:&copy;河北建材信息工程系 桑丽萍 李彩云 李浩宇所有2018-2028</div>
 </div>
-<script th:src="@{/web/denglu.js}" type="text/javascript"></script>
+<script th:src="@{/web/zhuce.js}" type="text/javascript"></script>
 </body>
 </html>

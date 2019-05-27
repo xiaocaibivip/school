@@ -58,4 +58,15 @@ public class SqlService {
 		List<Map<String, Object>> result = jdbcTemplate.queryForList(Sql.HUI_YUAN_TONG_JI);
 		return result;
 	}
+
+	// 登录
+	public boolean login(String phone, String password) {
+		String sql = Sql.LOGIN_CHECK.replaceAll("phoneNeed", phone);
+		sql = sql.replaceAll("passwordNeed", password);
+		List<Map<String, Object>> result = jdbcTemplate.queryForList(sql);
+		if (result != null && result.size() > 0) {
+			return true;
+		}
+		return false;
+	}
 }

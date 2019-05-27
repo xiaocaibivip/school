@@ -106,5 +106,24 @@ a {
 
 }
 
+.left {
+    float: left;
+    width: 50%;
+    height: 300px;
+}
+.right {
+    height: 300px;
+}
+
+.denglu-header {
+    font-size: 36px;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+    font-family: "隶书";
+    color: #039;
+}
+
+
 
 

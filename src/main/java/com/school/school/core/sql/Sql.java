@@ -41,4 +41,8 @@ public class Sql {
 	//数据统计(统计当月注册了的会员人数)
 	public static String HUI_YUAN_TONG_JI = "select COUNT(*) as amount,Datename(year,GetDate())+Datename(month,GetDate()) as monthNum from customers\n" +
 			"where year(regdate)=year(GETDATE())and  month(regdate)=month(GETDATE())\n";
+
+	public static String LOGIN_CHECK = "SELECT * FROM customers WHERE customerphone = 'phoneNeed' AND password = 'passwordNeed'";
+
+	public static String SAVE_CUSTOMER = "INSERT INTO customers VALUES ('customerid', 'customername', 'password', 'customerphone', 'email', 'regdate', 'address', 'city', 'birthday', 'upoint')";
 }

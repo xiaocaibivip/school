@@ -65,4 +65,10 @@ public class ApiSqlController {
 		return result;
 	}
 
+	// 登录
+	@RequestMapping(value = "/login/{phone}/{password}", method = RequestMethod.GET)
+	public boolean login(@PathVariable("phone") String phone, @PathVariable("password")String password) {
+		return sqlService.login(phone, password);
+	}
+
 }
